@@ -1,7 +1,7 @@
 package com.example.rodoggx.designdelta;
 
 import android.os.Bundle;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,7 +37,7 @@ public static PageFragment create(int pageNumber) {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         ViewGroup view = (ViewGroup) inflater.inflate(R.layout.fragment_screen_slide_page, container, false);
-        ((TextView) view.findViewById(android.R.id.text1))
+        ((TextView) view.findViewById(R.id.fragment_text))
                 .setText(getString(R.string.title, pageNumber + 1));
         return view;
     }

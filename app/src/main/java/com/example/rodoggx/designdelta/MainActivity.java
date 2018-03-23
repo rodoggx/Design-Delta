@@ -5,13 +5,12 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
-//import android.support.v13.app.FragmentStatePagerAdapter;
 import android.os.Bundle;
 
 public class MainActivity extends FragmentActivity {
     private static final int NUM_PAGES = 5;
     private ViewPager pager;
-    private android.support.v4.view.PagerAdapter adapter;
+    private PagerAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
