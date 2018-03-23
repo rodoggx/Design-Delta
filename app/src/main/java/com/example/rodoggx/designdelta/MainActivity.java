@@ -35,13 +35,21 @@ public class MainActivity extends FragmentActivity {
 
         @Override
         public Fragment getItem(int position) {
-//            return null;
-                        return PageFragment.create(position);
+        return PageFragment.create(position);
         }
 
         @Override
         public int getCount() {
             return NUM_PAGES;
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (pager.getCurrentItem() == 0) {
+            super.onBackPressed();
+        } else {
+            pager.setCurrentItem(pager.getCurrentItem() - 1);
         }
     }
 }
