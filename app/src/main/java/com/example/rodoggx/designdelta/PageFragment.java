@@ -38,7 +38,7 @@ public static PageFragment create(int pageNumber) {
         // Inflate the layout for this fragment
         ViewGroup view = (ViewGroup) inflater.inflate(R.layout.fragment_screen_slide_page, container, false);
         ((TextView) view.findViewById(R.id.fragment_text))
-                .setText(getString(R.string.title, pageNumber + 1));
+                .setText(getString(R.string.title, getPageNumber() + 1));
         return view;
     }
 

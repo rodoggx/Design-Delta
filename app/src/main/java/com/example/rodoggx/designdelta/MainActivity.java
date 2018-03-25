@@ -16,8 +16,8 @@ public class MainActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         pager = findViewById(R.id.pager);
+        pager.setPageTransformer(true, new ZoomPageTransformer());
         adapter = new PagerAdapter(getSupportFragmentManager());
         pager.setAdapter(adapter);
         pager.addOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
@@ -35,7 +35,7 @@ public class MainActivity extends FragmentActivity {
 
         @Override
         public Fragment getItem(int position) {
-        return PageFragment.create(position);
+            return PageFragment.create(position);
         }
 
         @Override
